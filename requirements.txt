@@ -1,0 +1,8 @@
+reportlab
+pyyaml
+psutil
+psycopg2
+matplotlib
+seaborn
+pandas
+numpy

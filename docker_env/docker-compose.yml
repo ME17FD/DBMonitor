@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  postgres:
+    build: ./postgres-ssh   # folder with Dockerfile that installs openssh-server
+    container_name: test-postgres-ssh
+    environment:
+      POSTGRES_USER: testuser
+      POSTGRES_PASSWORD: testpass
+      POSTGRES_DB: testdb
+    ports:
+      - "5433:5432"
+      - "2222:22"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:

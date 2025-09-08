@@ -1,6 +1,13 @@
 database:
   host: "localhost"
-  port: 5432
-  user: "postgres"
-  password: "toor"
-  dbname: "bank"
+  port: 5430
+  user: "repluser"
+  password: "replpass"
+  dbname: "mydb"
+
+  # SSH connection details (needed for remote system metrics)
+  ssh_user: "replica"        # or "postgres" depending on your container setup
+  ssh_password: "replicaconfig"
+  # ssh_key: "/path/to/private/key"   # optional, if you prefer key-based auth
+  ssh_port: 2220          # match your docker run / docker-compose port mapping
+ 

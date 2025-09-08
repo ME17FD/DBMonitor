@@ -1,0 +1,12 @@
+database:
+  host: "192.168.110.204"
+  port: 5433
+  user: "testuser"
+  password: "testpass"
+  dbname: "testdb"
+
+  # SSH connection details (needed for remote system metrics)
+  ssh_user: "root"        # or "postgres" depending on your container setup
+  ssh_password: "rootpass"
+  # ssh_key: "/path/to/private/key"   # optional, if you prefer key-based auth
+  ssh_port: 2222          # match your docker run / docker-compose port mapping
